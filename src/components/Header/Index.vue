@@ -29,6 +29,8 @@ export default {
   flex-direction: row;
   background-color: var(--header);
   justify-content: space-between;
+  box-shadow: rgba(0,0,0,.1) 0 1px 0 0;
+  z-index: 2;
 
   .home{
     display: flex;
