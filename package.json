@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "ui-clone-youtube",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

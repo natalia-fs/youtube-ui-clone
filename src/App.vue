@@ -1,32 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- <img alt="Vue logo" src="./assets/youtube-logo.svg"> -->
+    <Header/>
   </div>
 </template>
-
+<script>
+import './styles/global.scss'
+import Header from './components/Header/Index';
+export default {
+  components: {
+    Header,
+  }
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#app{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 56px auto;
+  grid-template-areas:
+  "HEADER HEADER"
+  "SIDEBAR MAIN"
 }
 </style>

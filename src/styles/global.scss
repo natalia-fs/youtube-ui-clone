@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, button, input{
+    border: 0;
+    outline: 0;
+    font-family: "Robot", sans-serif;
+}
+
+html, body, #app{
+    height: 100%;
+}
+
+:root{
+    --header: #202020;
+    --sidebar: #212121;
+    --main: #181818;
+}
