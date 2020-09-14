@@ -1,9 +1,11 @@
 <template>
   <div class="preview-container">
     <div class="thumb">
+      <div class="duration">{{duration}}</div>
       <img :src="formatThumbnail" alt="Preview" />
     </div>
     <div class="info">
+    
       <div class="channel-thumb">
         <img :src="formatThumbnail" alt="Channel" />
       </div>
@@ -12,11 +14,15 @@
         <strong class="channel-name">{{channelName}}</strong>
         <strong class="video-info">{{views}} visualizações • há {{upload}}</strong>
       </div>
+      <div class="options">
+        <DotsIcon />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import DotsIcon from "vue-material-design-icons/DotsVertical";
 export default {
     props:{
         videoName: String,
@@ -24,6 +30,10 @@ export default {
         views: Number,
         upload: String,
         videoThumb: String,
+        duration: String,
+    },
+    components: {
+      DotsIcon,
     },
     computed: {
         formatThumbnail(){
@@ -41,6 +51,7 @@ export default {
   max-height: 252px;
   align-items: center;
   margin: 0 .6rem 1rem .6rem;
+  cursor: pointer;
 
   .thumb {
     margin-left: .2rem;
@@ -49,10 +60,24 @@ export default {
       height: 142px;
       object-fit: cover;
     }
+    .duration{
+      background-color: rgba(0,0,0,.6);
+      color: var(--white);
+      padding: .2rem;
+      float: right;
+      margin: 0 .2rem 0 0;
+      width: fit-content;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 4px;
+      z-index: 2;
+      position: relative;
+      top: 138px;
+    }
   }
   .info {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50px auto 24px;
     color: var(--gray);
     font-size: 14px;
     width: 253px;
@@ -85,10 +110,24 @@ export default {
         .channel-name{
             padding-bottom: .2rem;
             font-weight: 400;
+            &:hover{
+              color: var(--white);
+            }
         }
         .video-info{
             font-weight: 400;
         }
+    }
+    .options{
+      display: none;
+    }
+  }
+}
+.preview-container:hover{
+  .options{
+    display: block;
+    &:hover{
+      color: var(--white);
     }
   }
 }
