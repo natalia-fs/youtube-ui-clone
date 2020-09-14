@@ -2,19 +2,19 @@
   <div class="nav-container">
     <div class="item active">
       <div class="icon">
-        <HomeIcon size="22"/>
+        <HomeIcon :size="22"/>
       </div>
       <p>Início</p>
     </div>
     <div class="item">
       <div class="icon">
-        <TrendingIcon size="22"/>
+        <TrendingIcon :size="22"/>
       </div>
       <p>Em alta</p>
     </div>
     <div class="item">
       <div class="icon">
-        <SubsIcon size="22"/>
+        <SubsIcon :size="22"/>
       </div>
       <p>Inscrições</p>
     </div>
@@ -41,7 +41,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: .8rem 0;
+  padding: .2rem 0;
   cursor: pointer;
   border-bottom: solid 1px var(--hover);
 

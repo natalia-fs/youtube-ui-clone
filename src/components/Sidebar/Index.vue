@@ -21,16 +21,24 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar-container{
-    display: flex;
+    display: grid;
     flex-direction: column;
     background-color: var(--sidebar);
     max-height: calc(100vh - 56px);
     grid-area: SIDEBAR;
-    grid-template-rows: 147px 267px auto;
+    grid-template-rows: 128px 248px auto;
     grid-template-areas:
       "NAV"
       "USER"
       "SUBS"
     ;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+    width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: var(--hover);
+    }
 }
 </style>

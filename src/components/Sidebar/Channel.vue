@@ -25,9 +25,8 @@ export default {
   align-items: center;
   font-weight: 400;
   font-size: 14px;
-  width: 230px;
+  width: auto;
   height: 40px;
-  padding: 0 1.4rem;
   p {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -47,6 +46,7 @@ export default {
     height: 24px;
     background-color: var(--white);
     border-radius: 50%;
+    place-self: center;
   }
   .channel-info {
     display: flex;
@@ -58,6 +58,7 @@ export default {
       width: 4px;
       height: 4px;
       border-radius: 50%;
+      margin-right: .4rem;
     }
   }
 }

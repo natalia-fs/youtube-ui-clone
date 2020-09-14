@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/youtube-logo.svg"> -->
     <Header/>
     <Sidebar/>
+    <Content/>
   </div>
 </template>
 <script>
 import './styles/global.scss'
 import Header from './components/Header/Index';
 import Sidebar from './components/Sidebar/Index';
+import Content from './components/Content/Index';
 export default {
   components: {
     Header,
-    Sidebar
+    Sidebar,
+    Content
   }
 }
 </script>

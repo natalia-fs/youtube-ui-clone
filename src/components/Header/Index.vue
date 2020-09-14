@@ -8,7 +8,7 @@
       <div class="story"></div>
       <div class="story"></div>
       <div class="story"></div>
-      <div class="story"></div>
+      <div class="story profile"></div>
     </div>
   </div>
 </template>
@@ -34,8 +34,9 @@ export default {
 
   .home{
     display: flex;
-    width: 240px;  
+    width: 170px;  
     align-items: center;
+    justify-content: space-around;
     padding: 0 1rem;
     .menu-icon{
       width: 18px;
@@ -54,12 +55,16 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 0 .8rem;
     .story{
       width: 32px;
       height: 32px;
       margin: .2rem;
       border-radius: 50%;
       background-color: var(--sidebar);
+    }
+    .story.profile{
+      background-color: var(--hover);
     }
   }
 }
