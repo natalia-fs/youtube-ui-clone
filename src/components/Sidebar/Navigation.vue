@@ -18,6 +18,12 @@
       </div>
       <p>Inscrições</p>
     </div>
+    <div class="item library">
+      <div class="icon">
+        <LibraryIcon :size="22"/>
+      </div>
+      <p>Biblioteca</p>
+    </div>
   </div>
 </template>
 
@@ -25,11 +31,13 @@
 import HomeIcon from "vue-material-design-icons/Home";
 import TrendingIcon from "vue-material-design-icons/Fire";
 import SubsIcon from "vue-material-design-icons/YoutubeSubscription";
+import LibraryIcon from "vue-material-design-icons/PlayBoxMultiple";
 export default {
   components: {
     HomeIcon,
     TrendingIcon,
-    SubsIcon
+    SubsIcon,
+    LibraryIcon
   }
 }
 </script>
@@ -44,7 +52,6 @@ export default {
   padding: .2rem 0;
   cursor: pointer;
   border-bottom: solid 1px var(--hover);
-
   .item{
     display: grid;
     grid-template-columns: 48px auto;
@@ -60,9 +67,40 @@ export default {
     }
     color: var(--icon-secondary);
     &.active{
+      color: var(--white);
+      background-color: var(--hover);
+      font-weight: 600;
+    }
+  }
+  .item.library{
+    display: none;
+  }
+}
+@media(max-width: 1125px){
+  .nav-container{
+    border: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .item.library{
+      display: flex;
+    }
+    .item{
+      display: flex;
+      flex-direction: column;
+      width: 74px;
+      height: 72px;
+      padding: .6rem 0;
+      p{
+        font-size: .5rem
+      }
+      &:hover{
+        background-color: inherit;
+      }
+      &.active{
         color: var(--white);
-        background-color: var(--hover);
+        background-color: inherit;
         font-weight: 600;
+      }
     }
   }
 }

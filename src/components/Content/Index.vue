@@ -176,11 +176,38 @@ export default {
 
 <style scoped lang="scss">
 .content-container {
-  display: flex;
-  flex-wrap: wrap;
+  // display: grid;
+  // // flex-wrap: wrap;
+  // // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  // padding: 1rem .6rem;
   grid-area: MAIN;
+  display: flex;
   background-color: var(--main);
-  padding: 1rem .6rem;
+  flex-direction: column;
+  padding: 1rem;
   overflow-y: scroll;
+}
+@media(min-width: 513px){
+  .content-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    padding: 1rem .6rem;
+  }
+}
+@media(min-width: 890px){
+  .content-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+  }
+}
+@media(min-width: 1145px){
+  .content-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    padding: 1rem .6rem;
+  }
 }
 </style>

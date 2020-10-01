@@ -41,4 +41,10 @@ export default {
       background-color: var(--hover);
     }
 }
+@media(max-width: 1125px){
+  .sidebar-container{
+    overflow: hidden;
+    grid-template-areas: "NAV";
+  }
+}
 </style>
