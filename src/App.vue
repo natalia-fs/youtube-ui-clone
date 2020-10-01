@@ -28,4 +28,10 @@ export default {
   "HEADER HEADER"
   "SIDEBAR MAIN"
 }
+@media(max-width: 1125px){
+  #app{
+    grid-template-columns: 74px auto;
+    grid-template-rows: 56px auto;
+  }
+}
 </style>

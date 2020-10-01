@@ -1,8 +1,8 @@
 <template>
   <div class="preview-container">
     <div class="thumb">
-      <div class="duration">{{duration}}</div>
       <img :src="formatThumbnail" alt="Preview" />
+      <div class="duration">{{duration}}</div>
     </div>
     <div class="info">
     
@@ -47,8 +47,8 @@ export default {
 .preview-container {
   display: flex;
   flex-direction: column;
-  max-width: 253px;
-  max-height: 252px;
+  // max-width: auto;
+  // max-height: 252px;
   align-items: center;
   margin: 0 .6rem 1rem .6rem;
   cursor: pointer;
@@ -56,8 +56,8 @@ export default {
   .thumb {
     margin-left: .2rem;
     img {
-      width: 253px;
-      height: 142px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
     }
     .duration{
@@ -72,7 +72,7 @@ export default {
       border-radius: 4px;
       z-index: 2;
       position: relative;
-      top: 138px;
+      top: -1.7rem;
     }
   }
   .info {
@@ -80,7 +80,7 @@ export default {
     grid-template-columns: 50px auto 24px;
     color: var(--gray);
     font-size: 14px;
-    width: 253px;
+    // width: 253px;
     max-height: 112px;
     padding-left: .2rem;
     padding-top: .8rem;
@@ -104,8 +104,14 @@ export default {
         flex-direction: column;
         .video-title{
             max-height: 40px;
+            overflow: hidden;
             color: var(--white);
-            padding-bottom: .2rem;
+            margin-bottom: .2rem;
+
+            // Reticências no final do título
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         .channel-name{
             padding-bottom: .2rem;
