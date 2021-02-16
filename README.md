@@ -1,5 +1,11 @@
 # UI Clone do Youtube
 
+Ui Clone da interface web do Youtube, usando VueJS e Sass
+
+## Preview
+
+[Acesse aqui](https://youtube-clone-nataliafs.netlify.app)
+
 ## Project setup
 ```
 yarn install
